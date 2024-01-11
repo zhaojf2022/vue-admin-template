@@ -1,6 +1,9 @@
+// 主应用内容展示区
 <template>
   <section class="app-main">
+    <!-- 实现展示路由视图的淡入淡出过渡效果 -->
     <transition name="fade-transform" mode="out-in">
+      <!-- 展示路由模块 -->
       <router-view :key="key" />
     </transition>
   </section>
