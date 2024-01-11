@@ -1,3 +1,4 @@
+// 登录认证过程中，获取，设置和删除Cookie
 import Cookies from 'js-cookie'
 
 const TokenKey = 'vue_admin_template_token'
