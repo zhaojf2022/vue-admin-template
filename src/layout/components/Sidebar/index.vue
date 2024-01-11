@@ -1,23 +1,13 @@
+// 合成完成的左边栏菜单
 <template>
   <div :class="{ 'has-logo': showLogo }">
     <logo v-if="showLogo" :collapse="isCollapse" />
     <el-scrollbar wrap-class="scrollbar-wrapper">
-      <el-menu
-        :default-active="activeMenu"
-        :collapse="isCollapse"
-        :background-color="variables.menuBg"
-        :text-color="variables.menuText"
-        :unique-opened="false"
-        :active-text-color="variables.menuActiveText"
-        :collapse-transition="false"
-        mode="vertical"
-      >
-        <sidebar-item
-          v-for="route in permission_routes"
-          :key="route.path"
-          :item="route"
-          :base-path="route.path"
-        />
+      <el-menu :default-active="activeMenu" :collapse="isCollapse" :background-color="variables.menuBg"
+        :text-color="variables.menuText" :unique-opened="false" :active-text-color="variables.menuActiveText"
+        :collapse-transition="false" mode="vertical">
+        <!-- 使用 permission_routes 中定义的路由来生成菜单-->
+        <sidebar-item v-for="route in permission_routes" :key="route.path" :item="route" :base-path="route.path" />
       </el-menu>
     </el-scrollbar>
   </div>
