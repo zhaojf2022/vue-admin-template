@@ -1,4 +1,4 @@
-// 定义菜单项的属性和渲染方法
+<!-- 定义普通菜单项的属性和渲染方法 -->
 <script>
 export default {
   name: "MenuItem",

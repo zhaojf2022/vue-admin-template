@@ -1,4 +1,4 @@
-// 渲染侧边栏菜单项logo和标题的组件
+<!-- 渲染侧边栏菜单项logo和标题的组件 -->
 <template>
   <div class="sidebar-logo-container" :class="{ collapse: collapse }">
     <transition name="sidebarLogoFade">

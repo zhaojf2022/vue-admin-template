@@ -1,10 +1,13 @@
+// 判断用户设备是否是移动端，来控制页面缩放
 import store from '@/store'
 
 const { body } = document
-const WIDTH = 992 // refer to Bootstrap's responsive design
+// refer to Bootstrap's responsive design
+const WIDTH = 992
 
 export default {
   watch: {
+    // 监听路由变化，如果是移动端，关闭侧边栏
     $route(route) {
       if (this.device === 'mobile' && this.sidebar.opened) {
         store.dispatch('app/closeSideBar', { withoutAnimation: false })
@@ -24,6 +27,7 @@ export default {
       store.dispatch('app/closeSideBar', { withoutAnimation: true })
     }
   },
+
   methods: {
     // use $_ for mixins properties
     // https://vuejs.org/v2/style-guide/index.html#Private-property-names-essential

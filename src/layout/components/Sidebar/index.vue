@@ -1,4 +1,4 @@
-// 合成完成的左边栏菜单
+<!-- 合成左边栏菜单 -->
 <template>
   <div :class="{ 'has-logo': showLogo }">
     <logo v-if="showLogo" :collapse="isCollapse" />

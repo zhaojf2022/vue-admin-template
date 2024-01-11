@@ -1,4 +1,4 @@
-// 渲染连接组件
+<!-- 渲染链接菜单项 -->
 <template>
   <component :is="type" v-bind="linkProps(to)">
     <slot />

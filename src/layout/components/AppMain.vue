@@ -1,4 +1,4 @@
-// 主应用内容展示区
+<!-- 主应用内容展示区 -->
 <template>
   <section class="app-main">
     <!-- 实现展示路由视图的淡入淡出过渡效果 -->
@@ -28,6 +28,7 @@ export default {
   position: relative;
   overflow: hidden;
 }
+
 .fixed-header+.app-main {
   padding-top: 50px;
 }
